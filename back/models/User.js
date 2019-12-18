@@ -7,67 +7,59 @@ module.exports = (sequelize, DataTypes) => {
         firstname: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: true,
-            }
+           
         },
         lastname: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isAlpha: true,
-            }
+            allowNull: false
         },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            validate: {
-                isEmail: true
-            }
+           
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
         },
         birthday: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull:false,
-            validate: {
-                isDate: true
-            }
+            
         },
         birthday_place: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         actual_club: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         categorie: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         size: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         weight: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         hobbies: {
             type: DataTypes.STRING,
             allowNull: true,
+            
         },
         profil_pic: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         role: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
 
 

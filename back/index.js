@@ -14,5 +14,5 @@ require('./routes/UserRoutes')(app)
 
 models  
     .sequelize
-    .sync()
+    .sync({alter:true})
     .then(() => app.listen(port, () => console.log(`App listening on port ${port}`)));
