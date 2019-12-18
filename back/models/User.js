@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
                 isAlpha: true,
             }
         },
-        mail: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
@@ -38,27 +38,35 @@ module.exports = (sequelize, DataTypes) => {
         },
         birthday_place: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
         actual_club: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         categorie: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         size: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         weight: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         hobbies: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
         profil_pic: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
         role: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
         },
 
 
