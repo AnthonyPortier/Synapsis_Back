@@ -7,16 +7,11 @@ module.exports = (sequelize, DataTypes) => {
         firstname: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: true,
-            }
         },
         lastname: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: true,
-            }
+            
         },
         email: {
             type: DataTypes.STRING,
@@ -31,11 +26,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         birthday: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull:false,
-            validate: {
-                isDate: true
-            }
+        
         },
         birthday_place: {
             type: DataTypes.STRING,

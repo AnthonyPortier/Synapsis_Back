@@ -9,12 +9,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         date: {
-            type: DataTypes.DATE,
-            validate: {
-                isDate: true
-            },
+            type: DataTypes.STRING,
             allowNull: false,
         },
+    },{
+        timestamps:false
     });
 
     Distinction.associate = function (models) {
