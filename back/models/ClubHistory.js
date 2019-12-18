@@ -3,7 +3,7 @@
 const Sequelize = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    const Palmares = sequelize.define('Palmares', {
+    const Club_history = sequelize.define('Club_history', {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -23,13 +23,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-    }, {
-        underscored: true,
-        timestamps: true,
     });
-    Palmares.associate = function (models) {
-        
+    
+    Club_history.associate = function (models) {
+
 
     };
-    return Palmares;
+    return Club_history;
 };

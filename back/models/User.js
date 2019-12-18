@@ -39,17 +39,17 @@ module.exports = (sequelize, DataTypes) => {
         birthday_place: {
             type: DataTypes.STRING,
         },
-        actual_club : {
-            type:DataTypes.STRING
+        actual_club: {
+            type: DataTypes.STRING
         },
         categorie: {
             type: DataTypes.STRING
         },
-        size :{
-            type :DataTypes.STRING
+        size: {
+            type: DataTypes.STRING
         },
-        weight : {
-            type : DataTypes.STRING
+        weight: {
+            type: DataTypes.STRING
         },
         hobbies: {
             type: DataTypes.STRING,
