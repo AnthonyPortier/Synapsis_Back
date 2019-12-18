@@ -67,8 +67,10 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: true,
     });
     User.associate = function (models) {
-        User
-
+        User.hasMany(models.Client)
+        User.hasMany(models.Club_history)
+        User.hasMany(models.Palmares)
+        User.hasMany(models.Distinction)
     };
     return User;
 };

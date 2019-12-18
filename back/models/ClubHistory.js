@@ -24,9 +24,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
     });
-    
-    Club_history.associate = function (models) {
 
+    Club_history.associate = function (models) {
+        Club_history.belongsTo(models.User)
 
     };
     return Club_history;

@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Palmares.associate = function (models) {
-
+        Palmares.belongsTo(models.User)
 
     };
     return Palmares;

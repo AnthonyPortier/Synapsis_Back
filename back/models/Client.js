@@ -18,12 +18,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         club: {
             type: DataTypes.STRING,
-            allowNull:false,
+            allowNull: false,
         }
     });
 
     Client.associate = function (models) {
-
+        Client.belongsTo(models.User)
 
     };
     return Client;

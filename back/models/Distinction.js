@@ -18,8 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Distinction.associate = function (models) {
-
-
+        Distinction.belongsTo(models.User)
     };
     return Distinction;
 };
