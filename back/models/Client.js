@@ -19,7 +19,9 @@ module.exports = (sequelize, DataTypes) => {
         club: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+    }{
+        underscored:true,
     });
 
     Client.associate = function (models) {

@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         birthday: {
             type: DataTypes.DATE,
+            allowNull:false,
             validate: {
                 isDate: true
             }
@@ -58,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         hobbies: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         profil_pic: {
             type: DataTypes.STRING,
@@ -72,7 +73,7 @@ module.exports = (sequelize, DataTypes) => {
 
     }, {
         underscored: true,
-        timestamps: true,
+        timestamps: false,
     });
     User.associate = function (models) {
         User.hasMany(models.Client)
