@@ -23,6 +23,14 @@ module.exports = function (app) {
             .then(user => res.json(user))
     })
 
+    //Creer un nouveau user
+    app.post('/users', (req, res) => {
+        models
+            .User
+            .create(req.body)
+            .then(user => res.json(user))
+    })
+
     //Modifier un user par son id
     app.put('/users/:id', (req, res) => {
         models

@@ -60,6 +60,7 @@ module.exports = (sequelize, DataTypes) => {
         hobbies: {
             type: DataTypes.STRING,
             allowNull: true,
+            
         },
         profil_pic: {
             type: DataTypes.STRING,
