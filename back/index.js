@@ -12,8 +12,11 @@ app.use(bodyParser.urlencoded({ extended : true }))
 require('./routes/UserRoutes')(app)
 require('./routes/PalmaresRoutes')(app)
 
+require('./routes/DistinctionRoutes')(app)
+require('./routes/ClubHistoryRoutes')(app)
+require('./routes/ClientRoutes')(app)
 
 models  
     .sequelize
-    .sync()
+    .sync({alter:true})
     .then(() => app.listen(port, () => console.log(`App listening on port ${port}`)));

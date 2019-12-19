@@ -14,9 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         },
         date: {
             type: DataTypes.STRING,
-            validate: {
-                isDate: true
-            },
             allowNull: false,
         },
         description: {

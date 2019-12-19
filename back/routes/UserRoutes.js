@@ -12,13 +12,18 @@ module.exports = function (app) {
             .then(user => res.json(user))
     })
 
-    // Recuperer un user par son id incluant son historique et son palmares et ses distinctions perso
+   /*Recuperer un user par son id incluant :
+             son historique, 
+             son palmares  
+             ses distinctions perso
+             ses clients*/
+             
     app.get('/users/:id', (req, res) => {
         models
             .User
             .findByPk(
                 req.params.id,
-                { include: [models.Palmares, models.Club_history, models.Distinction] }
+                { include: [models.Palmares, models.Club_history, models.Distinction, models.Client,] }
                 )
             .then(user => res.json(user))
     })
