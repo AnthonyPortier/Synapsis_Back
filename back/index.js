@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({ extended : true }))
 require('./routes/UserRoutes')(app)
 require('./routes/PalmaresRoutes')(app)
 
+require('./routes/images.js')(app)
+
 require('./routes/DistinctionRoutes')(app)
 require('./routes/ClubHistoryRoutes')(app)
 require('./routes/ClientRoutes')(app)

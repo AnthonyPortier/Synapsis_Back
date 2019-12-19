@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
-    "database": "synapsis",
+    "password": "Adam1995!",
+    "database": "connexions",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
