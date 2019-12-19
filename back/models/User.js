@@ -6,49 +6,47 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
         firstname: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
+           
         },
         lastname: {
             type: DataTypes.STRING,
-            allowNull: false,
-            
+            allowNull: true
         },
         email: {
             type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true
-            }
+            allowNull: true,
+           unique: true,
+           
         },
         password: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         birthday: {
             type: DataTypes.STRING,
-            allowNull:false,
-        
+            allowNull:true,
+            
         },
         birthday_place: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         actual_club: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         categorie: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         size: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         weight: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         hobbies: {
             type: DataTypes.STRING,
@@ -57,11 +55,11 @@ module.exports = (sequelize, DataTypes) => {
         },
         profil_pic: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         role: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
 
 

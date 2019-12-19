@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "admin",
-    "password": "akodad1809",
+    "username": "root",
+    "password": "password",
     "database": "synapsis",
     "host": "127.0.0.1",
     "dialect": "mysql",
