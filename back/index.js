@@ -10,9 +10,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended : true }))
 
 require('./routes/UserRoutes')(app)
+require('./routes/PalmaresRoutes')(app)
 
 
 models  
     .sequelize
-    .sync({alter:true})
+    .sync()
     .then(() => app.listen(port, () => console.log(`App listening on port ${port}`)));
