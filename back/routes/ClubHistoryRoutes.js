@@ -41,7 +41,7 @@ module.exports = function (app) {
     //Supprimer un historique  par son id
     app.delete('/history/:id', (req, res) => {
         models
-            .history
+            .Club_history
             .destroy({ where: { id: req.params.id } })
             .then(history => res.json(history))
     })
