@@ -9,14 +9,16 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended : true }))
 
+const LoginRoutes = require('./routes/LoginRoutes')
+app.use('/utilisateur', LoginRoutes)
+
 require('./routes/UserRoutes')(app)
 require('./routes/PalmaresRoutes')(app)
-
 require('./routes/DistinctionRoutes')(app)
 require('./routes/ClubHistoryRoutes')(app)
 require('./routes/ClientRoutes')(app)
 
 models  
     .sequelize
-    .sync({alter:true})
+    .sync()
     .then(() => app.listen(port, () => console.log(`App listening on port ${port}`)));
